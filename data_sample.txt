@@ -1,0 +1,15 @@
+user@example.com
+firstname.lastname@company.co.uk
+https://www.example.com
+https://subdomain.example.org/page
+(123) 456-7890
+123-456-7890
+123.456.7890
+17:30
+19:30 PM
+<p>
+<div class="example">
+<img src="image.jpg" alt="description">
+#example
+#ThisIsAHashtag
+m.ebomah@alustudent.com
