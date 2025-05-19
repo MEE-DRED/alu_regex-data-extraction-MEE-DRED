@@ -1,0 +1,56 @@
+import unittest
+from regex_extractor import (
+    extract_emails,
+    extract_urls,
+    extract_phone_numbers,
+    extract_credit_cards,
+    extract_times,
+    extract_html_tags,
+    extract_hashtags,
+    extract_currency
+)
+
+class TestRegexExtractor(unittest.TestCase):
+
+    def test_extract_emails(self):
+        text = "Contact us at user@example.com and admin@site.co.uk"
+        result = extract_emails(text)
+        self.assertIn("user@example.com", result)
+        self.assertIn("admin@site.co.uk", result)
+
+    def test_extract_urls(self):
+        text = "Visit https://example.com or http://test.org/page"
+        result = extract_urls(text)
+        self.assertIn("https://example.com", result)
+        self.assertIn("http://test.org/page", result)
+
+    def test_extract_phone_numbers(self):
+        text = "(123) 456-7890, 123-456-7890, and 123.456.7890"
+        result = extract_phone_numbers(text)
+        self.assertIn("(123) 456-7890", result)
+        self.assertIn("123-456-7890", result)
+        self.assertIn("123.456.7890", result)
+
+    def test_extract_times(self):
+        text = "Time now is 14:30 or 2:30 PM"
+        result = extract_times(text)
+        self.assertIn("14:30", result)
+        self.assertIn("2:30 PM", result)
+
+    def test_extract_html_tags(self):
+        text = "<div class=\"sample\"><p>Text</p></div>"
+        result = extract_html_tags(text)
+        self.assertIn("<div class=\"sample\">", result)
+        self.assertIn("<p>", result)
+        self.assertIn("</p>", result)
+        self.assertIn("</div>", result)
+
+    def test_extract_hashtags(self):
+        text = "Use #Python, #regex, and #ThisIsAHashtag in your posts"
+        result = extract_hashtags(text)
+        self.assertIn("#Python", result)
+        self.assertIn("#regex", result)
+        self.assertIn("#ThisIsAHashtag", result)
+
+if __name__ == '__main__':
+    unittest.main()
