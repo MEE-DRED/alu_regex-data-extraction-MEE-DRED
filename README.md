@@ -6,7 +6,7 @@ It is a python-based project designed to extract structured data from unstructur
 
 
 
-My tree folder, Regex Hackathon, houses a regex_extractor.py file that contains all regex extraction functions, a Test folder and a test file that contains all unittest for the extraction functions, and a data_samples.txt file that contains all sample datat used for extraction.
+My tree folder, Regex Hackathon, houses a regex_extractor.py file that contains all regex extraction functions, a Test folder and a test file that contains all unittest for the extraction functions, and a data_samples.txt file that contains all sample data used for extraction. I used my email m.ebomah@alustudent.com to confirm the standard email format.
 
 
 
